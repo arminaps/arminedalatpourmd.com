@@ -95,18 +95,39 @@
 </head>
 <body>
 
-<nav>
-  <div class="nav-name"><a href="index.html">Armin Edalatpour, M.D.</a></div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="training.html">Training</a></li>
-    <li><a href="research.html" class="active">Research</a></li>
-    <li><a href="societies.html">Societies</a></li>
-    <li><a href="awards.html">Awards</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+<nav class="site-nav">
+  <div class="nav-left">
+    <a class="nav-social-link" href="https://www.instagram.com/arminedalatpourmd/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+    <a class="nav-social-link" href="https://www.twitter.com/arminaps" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+    </a>
+  </div>
+  <div class="nav-center">
+    <div class="nav-name"><a href="index.html">Armin Edalatpour, M.D.</a></div>
+  </div>
+  <div class="nav-right">
+    <button class="hamburger" id="menuBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-dropdown" id="navDropdown">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="training.html">Training</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="honors.html">Honors &amp; Societies</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </nav>
+
+
 
 <div class="page">
   <div class="inner">
@@ -270,6 +291,12 @@
     document.getElementById(id).classList.add('active');
     btn.classList.add('active');
   }
+</script>
+<script>
+  const btn = document.getElementById('menuBtn');
+  const drop = document.getElementById('navDropdown');
+  btn.addEventListener('click', (e) => { e.stopPropagation(); drop.classList.toggle('open'); });
+  document.addEventListener('click', () => drop.classList.remove('open'));
 </script>
 </body>
 </html>
