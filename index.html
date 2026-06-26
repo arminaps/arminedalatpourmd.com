@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Armin Edalatpour, M.D. | Plastic Surgery Fellow</title>
-  <meta name="description" content="Armin Edalatpour, M.D. — Plastic Surgery Fellow at El Paso Cosmetic Surgery under Dr. Sadri O. Sozer, FACS." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -12,24 +11,7 @@
   <style>
     body { overflow-x: hidden; }
 
-    /* ── NAV SOCIAL ICONS ────────────────────────────────── */
-    .nav-left {
-      display: flex; flex-direction: column; gap: 0.35rem;
-    }
-    .nav-social {
-      display: flex; gap: 0.9rem; align-items: center;
-    }
-    .nav-social a {
-      color: var(--white-dim);
-      transition: color 0.2s, transform 0.2s;
-      display: flex; align-items: center;
-    }
-    .nav-social a:hover {
-      color: var(--gold);
-      transform: translateY(-1px);
-    }
-
-    /* ── HERO: centered name + photo ─────────────────────── */
+    /* ── HERO ───────────────────────────────────────────────── */
     .hero {
       min-height: 100vh;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -37,131 +19,83 @@
       padding: 9rem 4rem 5rem;
       text-align: center;
     }
-    .hero::before {
+    /* Background image */
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background: url('hero-bg.jpg') center center / cover no-repeat;
+    }
+    .hero-bg::after {
       content: '';
       position: absolute; inset: 0;
-      background-image:
-        radial-gradient(circle at 20% 40%, rgba(201,168,76,0.07) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(201,168,76,0.04) 0%, transparent 40%);
+      background: linear-gradient(
+        to bottom,
+        rgba(10,10,10,0.72) 0%,
+        rgba(10,10,10,0.55) 40%,
+        rgba(10,10,10,0.78) 100%
+      );
     }
+    /* Persian ornament */
     .ornament {
-      position: absolute; right: -80px; top: 50%; transform: translateY(-50%);
-      width: 580px; height: 580px; opacity: 0.05; pointer-events: none;
+      position: absolute; right: -60px; top: 50%; transform: translateY(-50%);
+      width: 540px; height: 540px; opacity: 0.08; pointer-events: none; z-index: 1;
     }
-
     /* Photo */
-    .hero-photo-wrap {
-      position: relative; z-index: 1;
-      margin-bottom: 2.2rem;
-    }
+    .hero-photo-wrap { position: relative; z-index: 2; margin-bottom: 2rem; }
     .hero-photo {
-      width: 160px; height: 160px;
-      border-radius: 50%;
+      width: 160px; height: 160px; border-radius: 50%;
       object-fit: cover; object-position: center top;
       border: 2px solid var(--gold-border);
-      box-shadow: 0 0 0 6px rgba(201,168,76,0.08);
+      box-shadow: 0 0 0 6px rgba(201,168,76,0.1), 0 8px 40px rgba(0,0,0,0.5);
       display: block;
     }
-
-    /* Name block */
-    .hero-content {
-      position: relative; z-index: 1;
-      display: flex; flex-direction: column; align-items: center;
-      max-width: 800px;
-    }
+    /* Name */
+    .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; max-width: 860px; }
     .hero-eyebrow {
       font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1.4rem;
+      color: var(--gold); margin-bottom: 1.2rem;
       display: flex; align-items: center; gap: 1rem;
     }
-    .hero-eyebrow::before, .hero-eyebrow::after {
-      content: ''; width: 28px; height: 1px; background: var(--gold);
-    }
+    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 28px; height: 1px; background: var(--gold); }
     .hero-name {
       font-family: var(--serif);
-      font-size: clamp(4rem, 8vw, 7.5rem);
-      font-weight: 300;
-      line-height: 1.0;
-      letter-spacing: 0.03em;
-      color: var(--white);
-      margin-bottom: 0.2rem;
+      font-size: clamp(4.5rem, 9vw, 8.5rem);
+      font-weight: 300; line-height: 1.0; letter-spacing: 0.03em;
+      color: var(--white); margin-bottom: 0.2rem;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.6);
     }
     .hero-name em { font-style: italic; color: var(--gold); display: block; }
     .hero-credential {
-      font-family: var(--serif);
-      font-size: 1.2rem; font-weight: 300;
-      color: var(--white-dim); letter-spacing: 0.08em;
-      margin-bottom: 1.8rem; margin-top: 0.4rem;
+      font-family: var(--serif); font-size: 1.2rem; font-weight: 300;
+      color: var(--white-dim); letter-spacing: 0.08em; margin: 0.5rem 0 1.6rem;
     }
     .hero-divider {
       width: 50px; height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin: 0 auto 2rem;
+      margin: 0 auto 1.8rem;
     }
 
-    /* ── ABOUT STRIP below hero ──────────────────────────── */
+    /* ── ABOUT STRIP ─────────────────────────────────────────── */
     .home-about {
       background: var(--black-soft);
       border-top: 1px solid var(--gold-border);
       border-bottom: 1px solid var(--gold-border);
     }
     .home-about-inner {
-      max-width: 1200px; margin: 0 auto;
-      padding: 5rem 4rem;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 6rem;
-      align-items: start;
+      max-width: 1200px; margin: 0 auto; padding: 5rem 4rem;
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 6rem; align-items: start;
     }
-    .home-bio p {
-      font-size: 0.95rem; color: var(--white-dim);
-      line-height: 1.95; margin-bottom: 1.2rem;
-    }
+    .home-bio p { font-size: 0.95rem; color: var(--white-dim); line-height: 1.95; margin-bottom: 1.2rem; }
     .home-bio p strong { color: var(--white); font-weight: 500; }
     .home-bio-cta { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
-
-    /* Interest tags */
-    .interests-block h3 {
-      font-family: var(--serif); font-size: 1.3rem; font-weight: 400;
-      color: var(--white); margin-bottom: 1.2rem;
-    }
+    .interests-block h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--white); margin-bottom: 1.2rem; }
     .tags { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 2.5rem; }
-    .tag {
-      border: 1px solid var(--gold-border);
-      padding: 0.5rem 1.1rem;
-      font-size: 0.68rem; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--white-dim);
-    }
-
-    /* Stats */
-    .stats-mini {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 1rem; margin-top: 0.5rem;
-    }
-    .stat-mini {
-      border: 1px solid var(--gold-border);
-      padding: 1.4rem 1.6rem;
-      background: var(--white-faint);
-      position: relative;
-    }
-    .stat-mini::before {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 3px; height: 100%; background: var(--gold);
-    }
-    .stat-mini-n {
-      font-family: var(--serif); font-size: 2.4rem;
-      font-weight: 300; color: var(--gold); line-height: 1;
-    }
-    .stat-mini-l {
-      font-size: 0.62rem; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--white-dim); margin-top: 0.3rem;
-    }
-
-    /* ABPS notice on home */
-    .home-abps {
-      max-width: 1200px; margin: 0 auto;
-      padding: 2.5rem 4rem;
-    }
+    .tag { border: 1px solid var(--gold-border); padding: 0.5rem 1.1rem; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white-dim); }
+    .stats-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .stat-mini { border: 1px solid var(--gold-border); padding: 1.4rem 1.6rem; background: var(--white-faint); position: relative; }
+    .stat-mini::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--gold); }
+    .stat-mini-n { font-family: var(--serif); font-size: 2.4rem; font-weight: 300; color: var(--gold); line-height: 1; }
+    .stat-mini-l { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white-dim); margin-top: 0.3rem; }
+    .home-abps { max-width: 1200px; margin: 0 auto; padding: 2.5rem 4rem; }
 
     @media (max-width: 900px) {
       .hero { padding: 7rem 1.5rem 4rem; }
@@ -173,37 +107,42 @@
 </head>
 <body>
 
-<nav>
+<!-- ── SHARED NAV ─────────────────────────────────────────── -->
+<nav class="site-nav">
   <div class="nav-left">
-    <div class="nav-social">
-      <a href="https://www.instagram.com/arminedalatpourmd/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-          <circle cx="12" cy="12" r="4"/>
-          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-        </svg>
-      </a>
-      <a href="https://www.twitter.com/arminaps" target="_blank" rel="noopener" aria-label="X / Twitter">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-        </svg>
-      </a>
-    </div>
+    <a class="nav-social-link" href="https://www.instagram.com/arminedalatpourmd/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+    <a class="nav-social-link" href="https://www.twitter.com/arminaps" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+    </a>
+  </div>
+  <div class="nav-center">
     <div class="nav-name"><a href="index.html">Armin Edalatpour, M.D.</a></div>
   </div>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="training.html">Training</a></li>
-    <li><a href="research.html">Research</a></li>
-    <li><a href="societies.html">Societies</a></li>
-    <li><a href="awards.html">Awards</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <div class="nav-right">
+    <button class="hamburger" id="menuBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-dropdown" id="navDropdown">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="training.html">Training</a>
+      <a href="research.html">Research</a>
+      <a href="honors.html">Honors &amp; Societies</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </nav>
 
-<!-- ── HERO ─────────────────────────────────────────────── -->
+<!-- ── HERO ─────────────────────────────────────────────────── -->
 <div class="hero">
+  <div class="hero-bg"></div>
   <svg class="ornament" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="200" cy="200" r="195" stroke="#c9a84c" stroke-width="0.5"/>
     <circle cx="200" cy="200" r="155" stroke="#c9a84c" stroke-width="0.5"/>
@@ -213,23 +152,15 @@
     <polygon points="200,395 10,95 390,95" stroke="#c9a84c" stroke-width="0.5" fill="none"/>
     <polygon points="5,200 305,10 305,390" stroke="#c9a84c" stroke-width="0.3" fill="none"/>
     <polygon points="395,200 95,10 95,390" stroke="#c9a84c" stroke-width="0.3" fill="none"/>
-    <line x1="200" y1="5" x2="200" y2="395" stroke="#c9a84c" stroke-width="0.3" opacity="0.4"/>
-    <line x1="5" y1="200" x2="395" y2="200" stroke="#c9a84c" stroke-width="0.3" opacity="0.4"/>
     <circle cx="200" cy="200" r="7" fill="#c9a84c" opacity="0.6"/>
   </svg>
 
-  <!-- Photo -->
   <div class="hero-photo-wrap">
     <img class="hero-photo" src="Professional_Picture_UW.jpg" alt="Armin Edalatpour, M.D." />
   </div>
-
-  <!-- Name & credential -->
   <div class="hero-content">
     <div class="hero-eyebrow">Plastic Surgery Fellow &nbsp;·&nbsp; El Paso, Texas</div>
-    <h1 class="hero-name">
-      Armin
-      <em>Edalatpour</em>
-    </h1>
+    <h1 class="hero-name">Armin<em>Edalatpour</em></h1>
     <p class="hero-credential">M.D. &nbsp;·&nbsp; Aesthetic Surgery Fellowship</p>
     <div class="hero-divider"></div>
     <p style="font-size:0.95rem;color:var(--white-dim);max-width:520px;line-height:1.85;margin-bottom:2rem;">
@@ -244,68 +175,41 @@
   </div>
 </div>
 
-<!-- ── ABOUT STRIP ───────────────────────────────────────── -->
+<!-- ── ABOUT STRIP ──────────────────────────────────────────── -->
 <div class="home-about">
   <div class="home-about-inner">
-
     <div class="home-bio">
       <div class="section-label">About</div>
       <h2 class="section-title" style="margin-bottom:1.5rem;">Surgeon. Scholar. Leader.</h2>
-      <p>
-        Dr. Armin Edalatpour is a plastic surgeon who completed a six-year plastic and reconstructive surgery residency at the <strong>University of Wisconsin Hospitals and Clinics</strong> and is currently completing an <strong>aesthetic surgery fellowship</strong> at El Paso Cosmetic Surgery under the direction of <strong>Dr. Sadri O. Sozer, M.D., FACS</strong>.
-      </p>
-      <p>
-        His surgical interests span the full breadth of aesthetic and reconstructive surgery, with particular depth in <strong>body contouring, facial rejuvenation, breast surgery, and microsurgical reconstruction</strong>. He chairs the <strong>ASPS Resident &amp; Fellows Forum</strong> and serves on multiple national and international society committees.
-      </p>
-      <p>
-        Prior to medicine, Dr. Edalatpour served as a <strong>paramedic, critical care EMT, and program director</strong> for emergency medical training — a foundation that informs his commitment to patient safety and procedural excellence.
-      </p>
+      <p>Dr. Armin Edalatpour is a plastic surgeon who completed a six-year plastic and reconstructive surgery residency at the <strong>University of Wisconsin Hospitals and Clinics</strong> and is currently completing an <strong>aesthetic surgery fellowship</strong> at El Paso Cosmetic Surgery under the direction of <strong>Dr. Sadri O. Sozer, M.D., FACS</strong>.</p>
+      <p>His surgical interests span the full breadth of aesthetic and reconstructive surgery, with particular depth in <strong>body contouring, facial rejuvenation, breast surgery, and microsurgical reconstruction</strong>. He chairs the <strong>ASPS Resident &amp; Fellows Forum</strong> and serves on multiple national and international society committees.</p>
+      <p>Prior to medicine, Dr. Edalatpour served as a <strong>paramedic, critical care EMT, and program director</strong> for emergency medical training — a foundation that informs his commitment to patient safety and procedural excellence.</p>
       <div class="home-bio-cta">
         <a class="btn-primary" href="about.html">Full Biography</a>
         <a class="btn-ghost" href="training.html">Training &amp; Education</a>
       </div>
     </div>
-
     <div>
       <div class="interests-block">
         <h3>Clinical Interests</h3>
         <div class="tags">
-          <span class="tag">Facial Rejuvenation</span>
-          <span class="tag">Body Contouring</span>
-          <span class="tag">Breast Aesthetics</span>
-          <span class="tag">Breast Reconstruction</span>
-          <span class="tag">Microsurgery</span>
-          <span class="tag">Rhinoplasty</span>
-          <span class="tag">Facelift</span>
-          <span class="tag">Liposuction</span>
-          <span class="tag">Injectables &amp; Lasers</span>
-          <span class="tag">Hand Surgery</span>
+          <span class="tag">Facial Rejuvenation</span><span class="tag">Body Contouring</span>
+          <span class="tag">Breast Aesthetics</span><span class="tag">Breast Reconstruction</span>
+          <span class="tag">Microsurgery</span><span class="tag">Rhinoplasty</span>
+          <span class="tag">Facelift</span><span class="tag">Liposuction</span>
+          <span class="tag">Injectables &amp; Lasers</span><span class="tag">Hand Surgery</span>
         </div>
       </div>
       <div class="stats-mini">
-        <div class="stat-mini">
-          <div class="stat-mini-n">40+</div>
-          <div class="stat-mini-l">Peer-Reviewed Publications</div>
-        </div>
-        <div class="stat-mini">
-          <div class="stat-mini-n">60+</div>
-          <div class="stat-mini-l">Podium Presentations</div>
-        </div>
-        <div class="stat-mini">
-          <div class="stat-mini-n">6</div>
-          <div class="stat-mini-l">Years Residency — UW Madison</div>
-        </div>
-        <div class="stat-mini">
-          <div class="stat-mini-n">15+</div>
-          <div class="stat-mini-l">Society Memberships</div>
-        </div>
+        <div class="stat-mini"><div class="stat-mini-n">40+</div><div class="stat-mini-l">Peer-Reviewed Publications</div></div>
+        <div class="stat-mini"><div class="stat-mini-n">60+</div><div class="stat-mini-l">Podium Presentations</div></div>
+        <div class="stat-mini"><div class="stat-mini-n">6</div><div class="stat-mini-l">Years Residency — UW Madison</div></div>
+        <div class="stat-mini"><div class="stat-mini-n">15+</div><div class="stat-mini-l">Society Memberships</div></div>
       </div>
     </div>
-
   </div>
 </div>
 
-<!-- ABPS notice -->
 <div class="home-abps">
   <div class="abps-notice" style="max-width:100%;">
     <strong>Board Certification Notice:</strong> Dr. Edalatpour has completed a plastic surgery residency program and is currently completing an aesthetic surgery fellowship. He is not yet certified by the American Board of Plastic Surgery (ABPS). Board certification requires completion of training and passage of written and oral ABPS board examinations.
@@ -318,5 +222,11 @@
   <p class="footer-disclaimer">Dr. Edalatpour is not yet certified by the American Board of Plastic Surgery. Board certification requires completion of training and passage of ABPS written and oral examinations.</p>
 </footer>
 
+<script>
+  const btn = document.getElementById('menuBtn');
+  const drop = document.getElementById('navDropdown');
+  btn.addEventListener('click', (e) => { e.stopPropagation(); drop.classList.toggle('open'); });
+  document.addEventListener('click', () => drop.classList.remove('open'));
+</script>
 </body>
 </html>
