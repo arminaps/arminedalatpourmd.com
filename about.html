@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Armin Edalatpour, M.D.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 6rem;
+      align-items: start;
+    }
+    .about-bio p {
+      font-size: 0.95rem; color: var(--white-dim);
+      line-height: 1.95; margin-bottom: 1.3rem;
+    }
+    .about-bio p strong { color: var(--white); font-weight: 500; }
+
+    .stats-block { display: flex; flex-direction: column; gap: 1.2rem; }
+    .stat-card {
+      border: 1px solid var(--gold-border);
+      padding: 1.8rem 2rem;
+      background: var(--white-faint);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; gap: 1.8rem;
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%; background: var(--gold);
+    }
+    .stat-number {
+      font-family: var(--serif);
+      font-size: 3rem; font-weight: 300;
+      color: var(--gold); line-height: 1; min-width: 80px;
+    }
+    .stat-label {
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--white-dim);
+      line-height: 1.5;
+    }
+
+    .interests {
+      margin-top: 3.5rem;
+      border-top: 1px solid var(--gold-border);
+      padding-top: 3rem;
+    }
+    .interests h3 {
+      font-family: var(--serif); font-size: 1.4rem; font-weight: 400;
+      color: var(--white); margin-bottom: 1.5rem;
+    }
+    .interest-tags {
+      display: flex; flex-wrap: wrap; gap: 0.7rem;
+    }
+    .tag {
+      border: 1px solid var(--gold-border);
+      padding: 0.5rem 1.1rem;
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--white-dim);
+    }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name"><a href="index.html">Armin Edalatpour, M.D.</a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="training.html">Training</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="societies.html">Societies</a></li>
+    <li><a href="awards.html">Awards</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="inner">
+
+    <div class="section-label">About</div>
+    <h1 class="section-title">Surgeon. Scholar. Leader.</h1>
+    <p class="section-sub">A career defined by rigorous training, prolific scholarship, and meaningful service to the plastic surgery community.</p>
+
+    <div class="about-grid">
+      <div class="about-bio">
+        <p>
+          Dr. Armin Edalatpour is a plastic surgeon who completed a six-year plastic and reconstructive surgery residency at the <strong>University of Wisconsin Hospitals and Clinics</strong> and is currently completing an <strong>aesthetic surgery fellowship</strong> at El Paso Cosmetic Surgery under the direction of <strong>Dr. Sadri O. Sozer, M.D., FACS</strong> — an internationally recognized authority in aesthetic plastic surgery.
+        </p>
+        <p>
+          His surgical interests span the full breadth of aesthetic and reconstructive surgery, with particular depth in <strong>body contouring, facial rejuvenation, breast surgery, and microsurgical reconstruction</strong>. His academic career encompasses over 40 peer-reviewed publications, dozens of national podium presentations, and active leadership within the American Society of Plastic Surgeons (ASPS).
+        </p>
+        <p>
+          Prior to medicine, Dr. Edalatpour served as a <strong>paramedic, critical care EMT, and director of emergency medical training programs</strong> across multiple states — a foundation that informs his lifelong commitment to patient safety and procedural precision. He holds active medical licenses in both <strong>Texas (W3252)</strong> and <strong>Wisconsin (76338-20)</strong>.
+        </p>
+        <p>
+          In national service, he currently chairs the <strong>ASPS Resident &amp; Fellows Forum</strong> and serves as a Resident Council Delegate to the Council of Representatives, the Education Strategy Advisory Council, and the Young Plastic Surgeons Committee. Internationally, he serves on the ISAPS Residents &amp; E-Learning Committee and Fellowship Program Review Committee.
+        </p>
+        <p>
+          Dr. Edalatpour also maintains an active role in the academic literature as a peer reviewer for over 20 journals and as a member of the editorial board of <em>Plastic and Reconstructive Surgery – Global Open</em>.
+        </p>
+
+        <div class="abps-notice">
+          <strong>Board Certification Notice:</strong> Dr. Edalatpour has completed a plastic surgery residency program and is currently completing an aesthetic surgery fellowship. He is not yet certified by the American Board of Plastic Surgery (ABPS). Board certification requires completion of training and passage of written and oral ABPS board examinations.
+        </div>
+
+        <div class="interests">
+          <h3>Clinical Interests</h3>
+          <div class="interest-tags">
+            <span class="tag">Facial Rejuvenation</span>
+            <span class="tag">Body Contouring</span>
+            <span class="tag">Breast Aesthetics</span>
+            <span class="tag">Breast Reconstruction</span>
+            <span class="tag">Microsurgery</span>
+            <span class="tag">Rhinoplasty</span>
+            <span class="tag">Facelift</span>
+            <span class="tag">Liposuction</span>
+            <span class="tag">Injectables &amp; Lasers</span>
+            <span class="tag">Hand Surgery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-block">
+        <div class="stat-card">
+          <div class="stat-number">40+</div>
+          <div class="stat-label">Peer-Reviewed Publications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Years Residency Training — UW Madison</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">60+</div>
+          <div class="stat-label">National Podium Presentations</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Society Memberships</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Journals Reviewed For</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">ASERF Research Grants (Co-I)</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-name">Armin Edalatpour, M.D.</div>
+  <p>Aesthetic Surgery Fellow &nbsp;·&nbsp; El Paso Cosmetic Surgery &nbsp;·&nbsp; El Paso, Texas</p>
+  <p class="footer-disclaimer">Dr. Edalatpour is not yet certified by the American Board of Plastic Surgery. Board certification requires completion of training and passage of ABPS written and oral examinations.</p>
+</footer>
+
+</body>
+</html>

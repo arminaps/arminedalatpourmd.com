@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research | Armin Edalatpour, M.D.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Stats banner */
+    .pub-banner {
+      display: flex; gap: 0; flex-wrap: wrap;
+      border: 1px solid var(--gold-border);
+      margin-bottom: 4rem; overflow: hidden;
+    }
+    .pub-stat {
+      flex: 1; min-width: 140px;
+      padding: 2rem 2.2rem;
+      border-right: 1px solid var(--gold-border);
+      background: var(--white-faint);
+    }
+    .pub-stat:last-child { border-right: none; }
+    .pub-stat-n {
+      font-family: var(--serif); font-size: 2.8rem;
+      font-weight: 300; color: var(--gold); line-height: 1;
+    }
+    .pub-stat-l {
+      font-size: 0.62rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--white-dim); margin-top: 0.4rem;
+    }
+
+    /* Research areas */
+    .areas-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem; margin-bottom: 4rem;
+    }
+    .area-card {
+      border: 1px solid var(--gold-border); padding: 2rem;
+      background: var(--white-faint); transition: border-color 0.2s, background 0.2s;
+    }
+    .area-card:hover { border-color: var(--gold); background: var(--gold-faint); }
+    .area-icon { color: var(--gold); font-size: 1.1rem; margin-bottom: 0.9rem; }
+    .area-card h3 {
+      font-family: var(--serif); font-size: 1.15rem; font-weight: 400;
+      color: var(--white); margin-bottom: 0.6rem; line-height: 1.3;
+    }
+    .area-card p { font-size: 0.8rem; color: var(--white-dim); line-height: 1.7; }
+
+    /* Tabs */
+    .tabs { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 1px solid var(--gold-border); }
+    .tab {
+      padding: 0.8rem 1.8rem;
+      font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--white-dim); cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -1px;
+      transition: color 0.2s, border-color 0.2s; background: none;
+      border-top: none; border-left: none; border-right: none;
+      font-family: var(--sans);
+    }
+    .tab:hover { color: var(--white); }
+    .tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .pub-list { display: flex; flex-direction: column; gap: 1px; }
+
+    /* Grants */
+    .grant-card {
+      border: 1px solid var(--gold-border); padding: 2rem;
+      background: var(--white-faint); margin-bottom: 1rem;
+    }
+    .grant-card h4 {
+      font-family: var(--serif); font-size: 1.1rem; font-weight: 400;
+      color: var(--white); margin-bottom: 0.8rem; line-height: 1.3;
+    }
+    .grant-meta {
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      font-size: 0.75rem; color: var(--white-dim);
+    }
+    .grant-meta span { display: flex; align-items: center; gap: 0.4rem; }
+    .grant-meta strong { color: var(--gold); font-weight: 500; }
+
+    /* External links */
+    .ext-links { display: flex; gap: 1.2rem; flex-wrap: wrap; margin-top: 3rem; }
+
+    @media (max-width: 900px) {
+      .areas-grid { grid-template-columns: 1fr; }
+      .pub-banner { flex-direction: column; }
+      .pub-stat { border-right: none; border-bottom: 1px solid var(--gold-border); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name"><a href="index.html">Armin Edalatpour, M.D.</a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="training.html">Training</a></li>
+    <li><a href="research.html" class="active">Research</a></li>
+    <li><a href="societies.html">Societies</a></li>
+    <li><a href="awards.html">Awards</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="inner">
+
+    <div class="section-label">Research</div>
+    <h1 class="section-title">Scholarship &amp; Investigation</h1>
+    <p class="section-sub">An active research portfolio spanning aesthetic surgery, reconstructive outcomes, hand surgery, microsurgery, and surgical education — with contributions to over 40 peer-reviewed journals.</p>
+
+    <!-- Stats banner -->
+    <div class="pub-banner">
+      <div class="pub-stat"><div class="pub-stat-n">40+</div><div class="pub-stat-l">Published Articles</div></div>
+      <div class="pub-stat"><div class="pub-stat-n">3</div><div class="pub-stat-l">In Press</div></div>
+      <div class="pub-stat"><div class="pub-stat-n">8+</div><div class="pub-stat-l">Under Review</div></div>
+      <div class="pub-stat"><div class="pub-stat-n">60+</div><div class="pub-stat-l">Podium Presentations</div></div>
+      <div class="pub-stat"><div class="pub-stat-n">2</div><div class="pub-stat-l">Book Chapters</div></div>
+      <div class="pub-stat"><div class="pub-stat-n">20+</div><div class="pub-stat-l">Journals Reviewed</div></div>
+    </div>
+
+    <!-- Research areas -->
+    <div class="section-label" style="margin-bottom:1.5rem;">Focus Areas</div>
+    <div class="areas-grid">
+      <div class="area-card">
+        <div class="area-icon">✦</div>
+        <h3>Aesthetic Surgery</h3>
+        <p>Body contouring, laser and injectable outcomes, facelift technique, rhinoplasty, and cosmetic practice development — including ASERF-funded studies on TXA and CBD.</p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">✦</div>
+        <h3>Breast Surgery</h3>
+        <p>Autologous free flap reconstruction, prepectoral implant conversion, DIEP flap economics, perfusion imaging, and breast reduction outcomes.</p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">✦</div>
+        <h3>Hand &amp; Upper Extremity</h3>
+        <p>Carpal tunnel release, distal radius fractures, flexor tendon repair, trapeziometacarpal arthritis prevalence, and relative procedural value.</p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">✦</div>
+        <h3>Surgical Education</h3>
+        <p>Residency program analysis, applicant selection modeling, diversity in training pipelines, in-service exam trends, and society-based career development.</p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">✦</div>
+        <h3>Reconstructive Outcomes</h3>
+        <p>Gender-affirming surgery, buried penis reconstruction, headache surgery quality of life, pressure ulcer reconstruction, and microsurgical flap monitoring.</p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">✦</div>
+        <h3>Peer Review &amp; Editorial</h3>
+        <p>Editorial board member, <em>PRS Global Open</em>. Reviewer for <em>PRS</em>, <em>JPRAS</em>, <em>Aesthetic Plastic Surgery</em>, <em>ASJ</em>, <em>Annals of Plastic Surgery</em>, and 15+ additional journals.</p>
+      </div>
+    </div>
+
+    <!-- Tabbed publications -->
+    <div class="section-label" style="margin-bottom:1.5rem;">Publications</div>
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('published', this)">Published</button>
+      <button class="tab" onclick="showTab('inpress', this)">In Press</button>
+      <button class="tab" onclick="showTab('review', this)">Under Review</button>
+      <button class="tab" onclick="showTab('grants', this)">Grants</button>
+    </div>
+
+    <!-- PUBLISHED -->
+    <div id="published" class="tab-content active">
+      <div class="pub-list">
+        <div class="pub-item"><p><strong>Edalatpour A</strong>, Wirth P, Attaluri P, et al. Can Lasers Attract and Retain Patients in a Plastic Surgery Practice? <span class="journal">Facial Plastic Surgery &amp; Aesthetic Medicine.</span> 2025;27(3):212–213.</p></div>
+        <div class="pub-item"><p>Thornton SM, <strong>Edalatpour A</strong>, Lyon SM, et al. Charting the Course: Examining Trends and Proposing Improvements for the Plastic Surgery In-Service Examination. <span class="journal">Journal of Surgical Research.</span> 2025;314:701–706.</p></div>
+        <div class="pub-item"><p>Bay CC, George RE, Fine KS, <strong>Edalatpour A</strong>, et al. Comparing the Relative Value of Elective and Traumatic Hand Surgery Procedures. <span class="journal">Plastic and Reconstructive Surgery.</span> 2026;157(1):111–118.</p></div>
+        <div class="pub-item"><p>Kalluri MH, <strong>Edalatpour A</strong>, Seitz AJ, Gander BH. Use of Botulinum Toxin for the Treatment of Raynaud's Phenomenon. <span class="journal">PRS Global Open.</span> 2026;14(2):e7424.</p></div>
+        <div class="pub-item"><p><strong>Edalatpour A</strong>, Seitz AJ, Warden AM, et al. Outcomes of Enhanced Recovery Protocols and TXA on Double-Incision versus Periareolar Gender Affirming Mastectomy. <span class="journal">JPRAS.</span> 2024;88:360–368.</p></div>
+        <div class="pub-item"><p>Seitz AJ, MacKenzie EL, <strong>Edalatpour A</strong>, et al. Quantifying the Impact of Prepectoral Implant Conversion on Patient Satisfaction and Quality of Life. <span class="journal">PRS.</span> 2024;153(5):884e–894e.</p></div>
+        <div class="pub-item"><p>McLaughlin MT, Moura SP, <strong>Edalatpour A</strong>, et al. Insurance Status Predicts Hand Therapy Adherence Following Flexor Tendon Repair. <span class="journal">PRS.</span> 2024;153(5):962e–951e.</p></div>
+        <div class="pub-item"><p>Seitz AJ, <strong>Edalatpour A</strong>, Israel JS, et al. Postoperative Outcomes Following Buried Penis Reconstruction: A Single-Institution Experience. <span class="journal">PRS.</span> 2024;153(5):1151–1160.</p></div>
+        <div class="pub-item"><p>Kalluri MH, <strong>Edalatpour A</strong>, Thadikonda KM, et al. Patient Outcomes Following Various Maxillomandibular Fixation Techniques: A Systematic Review and Meta-Analysis. <span class="journal">JPRAS.</span> 2024;92:151–176.</p></div>
+        <div class="pub-item"><p>Rose K, <strong>Edalatpour A</strong>, et al. Topical TXA Decreases Time to Drain Removal and Postoperative Blood Loss in Autologous Breast Reconstruction. <span class="journal">Plastic Surgery.</span> 2024;32(3):395–403.</p></div>
+        <div class="pub-item"><p><strong>Edalatpour A</strong>, Attaluri PK, Shaffrey EC, et al. The Nuances of Abdominal Free Flap Harvest: Technical and Patient Factors Affecting Donor Site Morbidity. <span class="journal">JPRAS.</span> 2023;81:105–118.</p></div>
+        <div class="pub-item"><p>Mueller AM, Wood Matabele KL, <strong>Edalatpour A</strong>, et al. Social Media Popularity and Academic Productivity in Plastic Surgery: A Positive Correlation. <span class="journal">Aesthetic Plastic Surgery.</span> 2023;47(5):2150–2158.</p></div>
+        <div class="pub-item"><p>Shaffrey EC, <strong>Edalatpour A</strong>, Nicksic P, et al. Rise Above the Competition: How Do Plastic Surgery Applicants with NCAA Experience Fare in the Match? <span class="journal">Aesthetic Plastic Surgery.</span> 2023;48:1867–1873.</p></div>
+        <div class="pub-item"><p>Steiner Q, <strong>Edalatpour A</strong>, Seitz AJ, et al. Diversity in the Plastic Surgery Match: Effect of Program Chair, Director, and Faculty Race/Gender. <span class="journal">Journal of Craniofacial Surgery.</span> 2023;34(5):1376–1380.</p></div>
+        <div class="pub-item"><p>Nicksic PJ, Albano N, <strong>Edalatpour A</strong>, Afifi AM. Is Migraine Surgery Financially Viable? A Single-Surgeon, 10-Year Academic Study. <span class="journal">PRS.</span> 2025;155(5):928e–934e.</p></div>
+        <div class="pub-item"><p>Fine KS, Bay CC, Wirth PJ, <strong>Edalatpour A</strong>, et al. Economic Predictors of Plastic Surgery Expenditure: A 14-Year Analysis. <span class="journal">Aesthetic Surgery Journal Open Forum.</span> 2025;7:ojae121.</p></div>
+        <div class="pub-item"><p>Zona EE, Vo T, <strong>Edalatpour A</strong>, Israel JS. Maximizing Your Plastic Surgery Training: Professional Society Career Development Opportunities. <span class="journal">Annals of Plastic Surgery.</span> 2025;95(5):e36–52.</p></div>
+        <div class="pub-item"><p>Yang S, <strong>Edalatpour A</strong>, Israel J, Gast K. Recent Trends in Nipple Reconstruction – A Case Series and Social Media Analysis. <span class="journal">JPRAS.</span> 2025;108:1–7.</p></div>
+        <div class="pub-item"><p>Thornton SM, Shaffrey EC, Bay CC, <strong>Edalatpour A</strong>, et al. Risk Factors for Acute Intraoperative Bradycardia in Gender Mastectomy. <span class="journal">Plastic Surgery.</span> 2026;34(1):104–111.</p></div>
+        <div class="pub-item"><p>Steiner Q, George R, <strong>Edalatpour A</strong>, et al. Scoping Review: Transverse Carpal Ligament Sectioning and Thumb CMC Osteoarthritis Risk. <span class="journal">JPRAS Open.</span> 2026;48:980–987.</p></div>
+      </div>
+      <div class="ext-links">
+        <a class="btn-ghost" href="https://www.ncbi.nlm.nih.gov/myncbi/armin.edalatpour.2/bibliography/public/" target="_blank" rel="noopener">Full List on PubMed</a>
+        <a class="btn-ghost" href="https://scholar.google.com/citations?user=NBZfDrkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+    </div>
+
+    <!-- IN PRESS -->
+    <div id="inpress" class="tab-content">
+      <div class="pub-list">
+        <div class="pub-item"><p><strong>Edalatpour A</strong>, Carbullido K, George R, et al. Pressure Ulcer Reconstruction: Detailed Operative and Postoperative Protocols at A Single Institution. <span class="journal">Journal of Wound Care.</span> In Press.</p></div>
+        <div class="pub-item"><p>Gupta S, O'Shea A, <strong>Edalatpour A</strong>, Afifi A. Artery Averted: Safe Hemostatic Net Placement in Facelift Surgery. <span class="journal">Aesthetic Plastic Surgery.</span> In Press.</p></div>
+        <div class="pub-item"><p>El Minawi HM, Kadry HM, Rizkalla YR, <strong>Edalatpour A</strong>, et al. Redefining Limits: A Clinical Trial on the Safety of Combining Liposuction with Undermining During Abdominoplasty. <span class="journal">Plastic and Reconstructive Surgery.</span> In Press.</p></div>
+      </div>
+    </div>
+
+    <!-- UNDER REVIEW -->
+    <div id="review" class="tab-content">
+      <div class="pub-list">
+        <div class="pub-item"><p>Fine K, Kalluri MH, <strong>Edalatpour A</strong>, Afifi A. Aestheticians in an Academic Plastic Surgery Practice: Financial Insights from a Five-Year Review. <span class="journal">Aesthetic Surgery Journal.</span></p></div>
+        <div class="pub-item"><p>Moe E, <strong>Edalatpour A</strong>, Seitz A, et al. Effect of Breast Reduction on Obstructive Sleep Apnea. <span class="journal">Aesthetic Plastic Surgery.</span></p></div>
+        <div class="pub-item"><p>Fine KS, Gupta S, <strong>Edalatpour A</strong>, Michelotti BF. Balancing Costs and Care: Length of Stay Financial Implications in DIEP Flap Reconstruction. <span class="journal">Plastic Surgery.</span></p></div>
+        <div class="pub-item"><p>LaLiberte CJ, Fine KS, <strong>Edalatpour A</strong>, Michelotti BF. The Age of the Smartphone: Prevalence of Osteoarthritis in the Trapeziometacarpal Joint. <span class="journal">Journal of Hand Surgery.</span></p></div>
+        <div class="pub-item"><p>The ASPS Residents Council Residents Report Workgroup: Ford AA, <strong>Edalatpour A</strong>, et al. The Residents Council Resident Report: Part 1. <span class="journal">PRS Global Open.</span></p></div>
+        <div class="pub-item"><p>The ASPS Residents Council Residents Report Workgroup: <strong>Edalatpour A</strong>, Ford AA, et al. The Residents Council Resident Report: Part 2. <span class="journal">PRS Global Open.</span></p></div>
+      </div>
+    </div>
+
+    <!-- GRANTS -->
+    <div id="grants" class="tab-content">
+      <div class="grant-card">
+        <h4>Effect of CBD on Skin Flap Survival in a Rat Model</h4>
+        <div class="grant-meta">
+          <span><strong>Sponsor:</strong> ASERF Interim Research Grant</span>
+          <span><strong>Amount:</strong> $9,634.68</span>
+          <span><strong>Period:</strong> 09/2023 – 01/2025</span>
+          <span><strong>Role:</strong> Co-Investigator</span>
+          <span><strong>PI:</strong> Ahmed M. Afifi, M.D.</span>
+        </div>
+      </div>
+      <div class="grant-card">
+        <h4>Effect of Tranexamic Acid on Fat Viability After Liposuction</h4>
+        <div class="grant-meta">
+          <span><strong>Sponsor:</strong> ASERF Interim Research Grant</span>
+          <span><strong>Amount:</strong> $9,899.79</span>
+          <span><strong>Period:</strong> 09/2023 – 06/2025</span>
+          <span><strong>Role:</strong> Co-Investigator</span>
+          <span><strong>PI:</strong> Jeffrey D. Larson, M.D.</span>
+        </div>
+      </div>
+      <div class="grant-card">
+        <h4>Does TXA Reduce Bruising After Hyaluronic Acid Filler Injection? A Prospective Half Face Study</h4>
+        <div class="grant-meta">
+          <span><strong>Sponsor:</strong> ASERF Interim Research Grant</span>
+          <span><strong>Amount:</strong> $10,770.00</span>
+          <span><strong>Period:</strong> 03/2024 – 03/2025</span>
+          <span><strong>Role:</strong> Co-Investigator</span>
+          <span><strong>PI:</strong> Daniel Y. Cho, M.D., Ph.D.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-name">Armin Edalatpour, M.D.</div>
+  <p>Aesthetic Surgery Fellow &nbsp;·&nbsp; El Paso Cosmetic Surgery &nbsp;·&nbsp; El Paso, Texas</p>
+  <p class="footer-disclaimer">Dr. Edalatpour is not yet certified by the American Board of Plastic Surgery. Board certification requires completion of training and passage of ABPS written and oral examinations.</p>
+</footer>
+
+<script>
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

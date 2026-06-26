@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Armin Edalatpour, M.D. | Plastic Surgery Fellow</title>
+  <meta name="description" content="Armin Edalatpour, M.D. — Plastic Surgery Fellow at El Paso Cosmetic Surgery under Dr. Sadri O. Sozer, FACS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Hero fills the full viewport */
+    body { overflow-x: hidden; }
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding: 9rem 4rem 6rem;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 18% 55%, rgba(201,168,76,0.07) 0%, transparent 48%),
+        radial-gradient(circle at 78% 20%, rgba(201,168,76,0.04) 0%, transparent 38%);
+    }
+    /* Persian geometric ornament */
+    .ornament {
+      position: absolute; right: -60px; top: 50%; transform: translateY(-50%);
+      width: 620px; height: 620px; opacity: 0.055; pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
+    .hero-eyebrow {
+      font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.8rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; width: 32px; height: 1px; background: var(--gold);
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3.4rem, 6.5vw, 6rem);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+    .hero-name em { font-style: italic; color: var(--gold); display: block; }
+    .hero-credential {
+      font-family: var(--serif);
+      font-size: 1.25rem; font-weight: 300;
+      color: var(--white-dim); letter-spacing: 0.06em;
+      margin-bottom: 2.2rem;
+    }
+    .hero-divider {
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin-bottom: 2rem;
+    }
+    .hero-tagline {
+      font-size: 1.0rem; font-weight: 300; color: var(--white-dim);
+      max-width: 460px; line-height: 1.85; margin-bottom: 2.4rem;
+    }
+    .hero-cta { display: flex; gap: 1.2rem; flex-wrap: wrap; margin-top: 2.8rem; }
+
+    /* Quick-nav tiles */
+    .quick-nav {
+      position: absolute; right: 4rem; bottom: 4rem;
+      display: flex; flex-direction: column; gap: 0.7rem;
+      z-index: 2;
+    }
+    .quick-tile {
+      border: 1px solid var(--gold-border);
+      background: rgba(10,10,10,0.7);
+      backdrop-filter: blur(8px);
+      padding: 0.7rem 1.4rem;
+      font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--white-dim);
+      display: flex; align-items: center; gap: 0.8rem;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .quick-tile::after { content: '→'; color: var(--gold); font-size: 0.8rem; }
+    .quick-tile:hover {
+      border-color: var(--gold);
+      color: var(--white);
+      background: var(--gold-faint);
+    }
+
+    @media (max-width: 900px) {
+      .hero { padding: 7rem 1.5rem 12rem; }
+      .quick-nav { right: 1.5rem; bottom: 2rem; }
+      .quick-tile { padding: 0.6rem 1rem; }
+      .ornament { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name"><a href="index.html">Armin Edalatpour, M.D.</a></div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="training.html">Training</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="societies.html">Societies</a></li>
+    <li><a href="awards.html">Awards</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <!-- Persian geometric ornament SVG -->
+  <svg class="ornament" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="200" cy="200" r="195" stroke="#c9a84c" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="155" stroke="#c9a84c" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="115" stroke="#c9a84c" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="75" stroke="#c9a84c" stroke-width="0.5"/>
+    <polygon points="200,5 390,305 10,305" stroke="#c9a84c" stroke-width="0.5" fill="none"/>
+    <polygon points="200,395 10,95 390,95" stroke="#c9a84c" stroke-width="0.5" fill="none"/>
+    <polygon points="5,200 305,10 305,390" stroke="#c9a84c" stroke-width="0.3" fill="none"/>
+    <polygon points="395,200 95,10 95,390" stroke="#c9a84c" stroke-width="0.3" fill="none"/>
+    <line x1="200" y1="5" x2="200" y2="395" stroke="#c9a84c" stroke-width="0.3" opacity="0.4"/>
+    <line x1="5" y1="200" x2="395" y2="200" stroke="#c9a84c" stroke-width="0.3" opacity="0.4"/>
+    <circle cx="200" cy="200" r="7" fill="#c9a84c" opacity="0.6"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Plastic Surgery Fellow &nbsp;·&nbsp; El Paso, Texas</div>
+    <h1 class="hero-name">
+      Armin<br>
+      <em>Edalatpour</em>
+    </h1>
+    <p class="hero-credential">M.D. &nbsp;·&nbsp; Aesthetic Surgery Fellowship</p>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">
+      Comprehensive training in plastic, reconstructive, and aesthetic surgery —
+      bridging rigorous science with the art of surgical transformation.
+    </p>
+    <div class="abps-notice">
+      <strong>Board Certification Notice:</strong> Dr. Edalatpour has completed a plastic surgery residency and is currently completing an aesthetic surgery fellowship. He is not yet certified by the American Board of Plastic Surgery (ABPS). Certification requires passage of written and oral ABPS board examinations.
+    </div>
+    <div class="hero-cta">
+      <a class="btn-primary" href="about.html">About Dr. Edalatpour</a>
+      <a class="btn-ghost" href="research.html">Research Portfolio</a>
+    </div>
+  </div>
+
+  <!-- Quick navigation sidebar -->
+  <nav class="quick-nav" aria-label="Quick navigation">
+    <a class="quick-tile" href="about.html">About</a>
+    <a class="quick-tile" href="training.html">Training</a>
+    <a class="quick-tile" href="research.html">Research</a>
+    <a class="quick-tile" href="societies.html">Societies</a>
+    <a class="quick-tile" href="awards.html">Awards</a>
+    <a class="quick-tile" href="contact.html">Contact</a>
+  </nav>
+</div>
+
+<footer>
+  <div class="footer-name">Armin Edalatpour, M.D.</div>
+  <p>Aesthetic Surgery Fellow &nbsp;·&nbsp; El Paso Cosmetic Surgery &nbsp;·&nbsp; El Paso, Texas</p>
+  <p class="footer-disclaimer">Dr. Edalatpour is not yet certified by the American Board of Plastic Surgery. Board certification requires completion of training and passage of ABPS written and oral examinations.</p>
+</footer>
+
+</body>
+</html>

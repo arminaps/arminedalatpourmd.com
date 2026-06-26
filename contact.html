@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Armin Edalatpour, M.D.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+    .contact-block { margin-bottom: 3rem; }
+    .contact-block h3 {
+      font-family: var(--serif); font-size: 1.3rem; font-weight: 400;
+      color: var(--white); margin-bottom: 1.2rem;
+      padding-bottom: 0.8rem; border-bottom: 1px solid var(--gold-border);
+    }
+    .contact-row {
+      display: flex; gap: 1.2rem; align-items: flex-start;
+      margin-bottom: 1.1rem;
+    }
+    .contact-icon { color: var(--gold); min-width: 18px; font-size: 0.9rem; padding-top: 0.05rem; }
+    .contact-text { font-size: 0.88rem; color: var(--white-dim); line-height: 1.6; }
+    .contact-text a { color: var(--white-dim); }
+    .contact-text a:hover { color: var(--gold); }
+
+    /* Social buttons */
+    .social-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.8rem; margin-top: 0.5rem;
+    }
+    .social-btn {
+      border: 1px solid var(--gold-border); padding: 0.85rem 1.2rem;
+      font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--white-dim); display: flex; align-items: center; justify-content: center;
+      gap: 0.5rem; transition: all 0.2s;
+    }
+    .social-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Notice cards */
+    .notice-card {
+      background: var(--gold-faint);
+      border: 1px solid var(--gold-border);
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .notice-card h4 {
+      font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.8rem;
+    }
+    .notice-card p {
+      font-size: 0.83rem; color: var(--white-dim); line-height: 1.75;
+    }
+    .notice-card p strong { color: var(--white); font-weight: 400; }
+
+    /* Map placeholder */
+    .map-block {
+      border: 1px solid var(--gold-border);
+      background: var(--white-faint);
+      aspect-ratio: 16/9;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2rem;
+      font-size: 0.75rem; color: var(--white-dim);
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .social-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name"><a href="index.html">Armin Edalatpour, M.D.</a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="training.html">Training</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="societies.html">Societies</a></li>
+    <li><a href="awards.html">Awards</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="inner">
+
+    <div class="section-label">Contact</div>
+    <h1 class="section-title">Get in Touch</h1>
+    <p class="section-sub">For patient appointment inquiries, professional collaborations, speaking engagements, or research partnerships.</p>
+
+    <div class="contact-layout">
+
+      <!-- Left: contact details -->
+      <div>
+        <div class="contact-block">
+          <h3>El Paso Cosmetic Surgery</h3>
+          <div class="contact-row">
+            <div class="contact-icon">◈</div>
+            <div class="contact-text">651 S Mesa Hills Dr<br>El Paso, TX 79912</div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">◈</div>
+            <div class="contact-text">
+              <a href="tel:9153511116">(915) 351-1116</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">◈</div>
+            <div class="contact-text">
+              <a href="mailto:arminedalatpourmd@gmail.com">arminedalatpourmd@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-block">
+          <h3>Professional Profiles</h3>
+          <div class="social-grid">
+            <a class="social-btn" href="https://www.doximity.com/pub/armin-edalatpour-md" target="_blank" rel="noopener">Doximity</a>
+            <a class="social-btn" href="https://www.linkedin.com/in/armin-edalatpour-a0926157" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="social-btn" href="https://scholar.google.com/citations?user=NBZfDrkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a class="social-btn" href="https://www.ncbi.nlm.nih.gov/myncbi/armin.edalatpour.2/bibliography/public/" target="_blank" rel="noopener">PubMed</a>
+            <a class="social-btn" href="https://www.instagram.com/arminedalatpourmd/" target="_blank" rel="noopener">Instagram</a>
+            <a class="social-btn" href="https://www.twitter.com/arminaps" target="_blank" rel="noopener">X / Twitter</a>
+          </div>
+        </div>
+
+        <div class="map-block">
+          651 S Mesa Hills Dr &nbsp;·&nbsp; El Paso, TX
+        </div>
+      </div>
+
+      <!-- Right: notice cards -->
+      <div>
+        <div class="notice-card">
+          <h4>Patient Inquiries</h4>
+          <p>
+            Dr. Edalatpour is currently completing an aesthetic surgery fellowship at El Paso Cosmetic Surgery. Consultations and procedures are available under the direction of Fellowship Director <strong>Dr. Sadri O. Sozer, M.D., FACS</strong>. Please contact the office directly at <a href="tel:9153511116" style="color:var(--gold);">(915) 351-1116</a> for appointment inquiries.
+          </p>
+        </div>
+
+        <div class="notice-card">
+          <h4>Professional &amp; Academic Inquiries</h4>
+          <p>
+            For research collaboration, manuscript co-authorship, peer review requests, speaking invitations, or society committee work, please reach out directly by email at <a href="mailto:arminedalatpourmd@gmail.com" style="color:var(--gold);">arminedalatpourmd@gmail.com</a>.
+          </p>
+        </div>
+
+        <div class="notice-card">
+          <h4>Board Certification Status</h4>
+          <p>
+            Dr. Edalatpour has completed a plastic surgery residency program and is currently completing an aesthetic surgery fellowship. He is <strong>not yet certified</strong> by the American Board of Plastic Surgery (ABPS). Board certification requires completion of training and passage of written and oral ABPS board examinations.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-name">Armin Edalatpour, M.D.</div>
+  <p>Aesthetic Surgery Fellow &nbsp;·&nbsp; El Paso Cosmetic Surgery &nbsp;·&nbsp; El Paso, Texas</p>
+  <p class="footer-disclaimer">Dr. Edalatpour is not yet certified by the American Board of Plastic Surgery. Board certification requires completion of training and passage of ABPS written and oral examinations.</p>
+</footer>
+
+</body>
+</html>
